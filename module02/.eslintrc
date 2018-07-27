@@ -31,7 +31,8 @@
         {
           "argsIgnorePattern": "^_"
         }
-      ]
+      ],
+      "import/no-unresolved": "off"
     },
     "settings": {
       "import/resolver": {
