@@ -11,9 +11,9 @@ export default class App extends Component {
   }
 
   async componentDidMount() {
-    const username = await AsyncStorage.getItem('@Githuber:username')
+    const username = await AsyncStorage.getItem('@Githuber:username');
 
-    this.appLoaded(username)
+    this.appLoaded(username);
   }
 
   appLoaded = (username) => {
@@ -24,9 +24,10 @@ export default class App extends Component {
   }
 
   render() {
-    if (!this.state.userChecked) return null;
+    const { userChecked, userLogged } = this.state;
+    if (!userChecked) return null;
 
-    const Routes = createNavigator(this.state.userLogged);
+    const Routes = createNavigator(userLogged);
 
     return <Routes />;
   }
