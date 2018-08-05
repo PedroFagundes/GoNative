@@ -1,18 +1,14 @@
-import React, { Component } from 'react';
-import { View } from 'react-native';
+import React from 'react';
 import { Provider } from 'react-redux';
+import Routes from 'routes';
 
 import 'config/ReactotronConfig';
 import store from 'store';
 
-import TodoList from './TodoList';
+const App = () => (
+  <Provider store={store}>
+    <Routes />
+  </Provider>
+);
 
-export default class App extends Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <TodoList />
-      </Provider>
-    );
-  }
-}
+export default App;
